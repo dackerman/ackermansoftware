@@ -1,0 +1,134 @@
+<!doctype html>
+<head>
+	<style type="text/css" media="screen">
+		/* Color Scheme: http://colorschemedesigner.com/#0h41TtI--tIMP */
+		body {
+			background-color:#fff;
+			color:#ddd;
+			font-family:monospace;
+		}
+
+		#header {
+			color:#333;
+			width:900px;
+			margin:auto;
+			padding-right:10px;
+
+			font-size:2em;
+			border-bottom:#aaa;
+			text-align:right;
+		}
+
+		#header .fancy {
+			font-family:serif;
+			font-style:italic;
+		}
+
+		#content {
+			width:900px;
+			margin:auto;
+			padding:0px;
+		}
+		
+		.column {
+			width:300px;
+			height:100%;
+			float:left;
+		}
+		
+		.project {
+			height:200px;
+			padding:5px;
+			margin:5px;
+			margin-left:0px;
+			background-color:#fff;
+
+			border:5px solid #333;
+			box-shadow:5px 5px 0px #000;
+		}
+		
+		.top.left {
+			border-top-left-radius:	10px;
+			background-color:#ff9d12;
+		}
+
+		.top.center {
+			background-color:#2397ff;
+		}
+
+		.top.right {
+			border-top-right-radius: 10px;
+			background-color:#12ffa6;
+		}
+
+		.middle.left {
+			background-color:#c48a38;
+		}
+
+		.middle.center {
+			background-color:#4286c4;
+		}
+
+		.middle.right {
+			background-color:#38c48f;
+		}
+		
+		.bottom.left {
+			border-bottom-left-radius: 10px;
+			background-color:#ffc36e;
+		}
+
+		.bottom.center {
+			background-color:#79bfff;
+		}
+
+		.bottom.right {
+			border-bottom-right-radius: 10px;
+			background-color:#6effc8;
+		}
+
+		.top {
+		}
+
+		.center {
+			
+		}
+		
+		.bottom {
+		}
+		
+		.left {
+		}
+
+		.middle {
+			
+		}
+
+		.right {
+		}
+	</style>
+	<script src="github-projets.js"></script>
+</head>
+<body>
+	<div id="header">
+		<span class="fancy">David Ackerman's</span> Github projects
+	</div>
+	<div id="content">
+		<div id="left_column" class="column">
+			<div class="top left project"></div>
+			<div class="middle left project"></div>
+			<div class="bottom left project"></div>
+		</div>
+		<div id="center_column" class="column">
+			<div class="top center project"></div>
+			<div class="middle center project"></div>
+			<div class="bottom center project"></div>
+		</div>
+		<div id="right_column" class="column">
+			<div class="top right project"></div>
+			<div class="middle right project"></div>
+			<div class="bottom right project"></div>
+		</div>
+	</div>
+</body>
+</html>
