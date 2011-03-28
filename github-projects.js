@@ -8,4 +8,5 @@ $(document).ready(function(){
 		  $(this).css('background-color'));
 		event.preventDefault();
 	});
+	$(".top.left.project").click();
 });
