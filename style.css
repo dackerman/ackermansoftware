@@ -37,6 +37,7 @@ body {
 
 #viewer {
 	width:885px;
+	min-height:400px;
 	margin:auto;
 	margin-bottom:10px;
 
@@ -63,6 +64,8 @@ body {
 
 .viewer_content .description {
 	font-size:0.9em;
+	/*Keep floating divs inside block*/
+	overflow:hidden;
 }
 
 #content {

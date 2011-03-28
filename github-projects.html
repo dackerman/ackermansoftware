@@ -16,17 +16,17 @@
 	</div>
 	<div id="content">
 		<div id="left_column" class="column">
-			<div class="top left project">
+			<div id="101goals_id" class="top left project">
 				<div class="title">
 					101 Goals in 1001 Days
 					<a href="https://github.com/dackerman/101-in-1001-Goals" title="See the source code on Github!">
 						<img src="images/github-link.png" />
 					</a>
 				</div>
-				<a href="images/101in1001_mobile.png" title="Mobile version of the site">
-					<img class="thumb float-left" src="images/101in1001_mobile_thumb.png" />
-				</a>
 				<div class="description">
+					<a href="images/101in1001_mobile.png" title="Mobile version of the site">
+						<img class="thumb float-left" src="images/101in1001_mobile_thumb.png" />
+					</a>
 					<p>It all started when I read an article from <a href="http://www.blog.swetavajjhala.com/?p=387">Sweta Vajjhala's blog</a> about how to track your goals. The idea is that you come up with 101 things that you want to accomplish in about two years.  You write those goals down, then come up with a list of tasks for each goal.  The first task in each goal should be something you can take action on <em>right now</em>, so that you could pick from any goal on any day and start making progress on it.</p>
 					<a href="images/101in1001_desktop.png" title="Desktop version of the site">
 						<img class="thumb float-right" src="images/101in1001_desktop_thumb.png" />
@@ -40,7 +40,24 @@
 			<div class="bottom left project"></div>
 		</div>
 		<div id="center_column" class="column">
-			<div class="top center project"></div>
+			<div id="dackdroid_id" class="top center project">
+				<div class="title">
+					Dackdroid Game Engine
+					<a href="https://github.com/dackerman/Dackdroid-Game-Engine" title="See the source code on Github!">
+						<img src="images/github-link.png" />
+					</a>
+				</div>
+				<div class="description">
+					<img class="thumb float-right" src="images/dackdroid_code1.png" />
+					<p>This project is a 2D Game engine built specifically for android games. I have always been very interested in video game engines, but only recently have had any idea how to actually build one. I still don't, but I had some ideas about how I would go about it - especially after reading about the great talks from 
+					<a href="http://www.youtube.com/watch?v=7-62tRHLcHk">Chris Pruett</a>
+					about Android game development.</p>
+					<p>This application features two threads, one that renders the scene, and one that executes the game logic. The rendering thread gets frequently blocked by IO, so it's advantageous to have the game thread allowed to do some processing while the rendering thread displays the last image. I use double buffering, which both allows me to keep the game screen from flickering, but also allows me to build up the next frame of animation on the game thread while the rendering thread displays the last one.</p>
+					<img class="thumb float-left" src="images/dackdroid_code2.png" />
+					<p>The engine utilizes a tile system to render the screen, and uses a SurfaceHolder to actually do the drawing. The tiles can be any size, and infinitely tiled in the case of ground or grass. The rendering system doesn't use OpenGL, as I didn't want to lose the opportunity for being compatible on multiple platforms.</p>
+					<p>There is also a rudimentary camera system that currently can be controlled by the GameThread. If desired, the user of this library could control the camera X and Y position with the touchscreen, allowing the user to drag the camera around to view the world.</p>
+				</div>
+			</div>
 			<div class="middle center project"></div>
 			<div class="bottom center project"></div>
 		</div>
