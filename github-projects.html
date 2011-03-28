@@ -4,9 +4,15 @@
 	<link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="style.css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script src="countdown.js"></script>
 	<script src="github-projects.js"></script>
 </head>
 <body>
+	<!--[if IE]>
+		<div id="ie_warning">
+			Does this site look bad? It's because you are running Internet Explorer. Please try <a href="http://www.mozilla.com/en-US/firefox/new/">Firefox</a> or <a href="http://goo.gl/zJGLf">Chrome</a> for the best experience. <a href="images/screenshot.png">This</a> is the intended look.
+		</div>
+	<![endif]-->
 	<div id="header">
 		<span class="fancy">David Ackerman's</span> Github projects
 	</div>
@@ -76,7 +82,41 @@
 					<p>There is also a rudimentary camera system that currently can be controlled by the GameThread. If desired, the user of this library could control the camera X and Y position with the touchscreen, allowing the user to drag the camera around to view the world.</p>
 				</div>
 			</div>
-			<div class="middle center project"></div>
+			<div id="countdownjs_id" class="middle center project">
+				<div class="title">
+					Countdown.js Gist
+					<a href="https://gist.github.com/815928" title="See the gist on Github!">
+						<img src="images/github-link.png" />
+					</a>
+				</div>
+				<div class="description">
+					<div class="thumb float-left" style="background-color:white;width:250px;padding:5px;">
+						Running example!<br />
+						<div id="countdown"></div> until dackerman is 85 years old!
+						<table id="countdown_demo_table">
+							<tr>
+								<td><label for="countdown_year">Year</label></td>
+								<td><input id="countdown_year" type="text" value="1986" size="4"/></td>
+							</tr>
+							<tr>
+								<td><label for="countdown_month">Month</label></td>
+								<td><input id="countdown_month" type="text" value="7" size="2"/></td>
+							</tr>
+							<tr>
+								<td><label for="countdown_day">Day</label></td>
+								<td><input id="countdown_day" type="text" value="24" size="2"/></td>
+							</tr>
+							<tr>
+								<td><label for="countdown_ends">Ends In</label></td>
+								<td><input id="countdown_ends" type="text" value="31025" size="2"/> Days</td>
+							</tr>
+						</table>
+						<input id="countdown_recalculate" type="button" value="Recalculate" />
+					</div>
+					<p><code>Countdown.js</code> is a simple script I created to countdown a number of days until a goal is met.  The inputs to the function are the date the countdown started, and the number of days until the countdown ends.</p>
+					<p>This is not exactly the format of most countdown scripts, but it is perfect for the 101 goals in 1001 days project. This way, someone can enter in the day they started their goals, and it will tell them how many months, weeks, and days are left until it's over.</p>
+				</div>
+			</div>
 			<div class="bottom center project"></div>
 		</div>
 		<div id="right_column" class="column">
@@ -99,7 +139,19 @@
 					<p>As you can see from the debug output, the rendering and logic threads are both running around 20fps, but this is only because I have throttled them that slow - the actual framerate I could get with this demo (about 50 birds) was over 60fps.</p>
 				</div>
 			</div>
-			<div class="middle right project"></div>
+			<div id="dotemacs_id" class="middle right project">
+				<div class="title">
+					.emacs file
+					<a href="https://github.com/dackerman/Emacs-file" title="See the source code on Github!">
+						<img src="images/github-link.png" />
+					</a>
+				</div>
+				<div class="description">
+					<img class="thumb float-left" src="images/emacs_thumb.png" />
+					<p>This is just a copy of my <code>.emacs</code> file from my workstation.  I usually use emacs for my normal text editing needs, for things such as javascript, html, css, and python code. Although I love my emacs and it's keybindings, I am definitely an eclipse guy when it comes to Java code. There is just no other sane way of editing that stuff!</p>
+					<p>Also note that I have written at least a little emacs lisp code since I picked up the program. Although I am pretty familiar with functional programming languages in general, I am not very familiar with lisp in particular, so coming up with my own <code>backward-kill-word</code> was definitely a challenge. Also note that I took most of the <code>backward-kill-word</code> code from a post on stackoverflow, so I cannot claim all the credit for this function.</p>
+				</div>
+			</div>
 			<div class="bottom right project"></div>
 		</div>
 		<div id="footer">
@@ -112,5 +164,10 @@
 			<span>
 		</div>
 	</div>
+	<script>
+		// Script for the countdown.js window.
+		countdown.barWidth = 240;
+		countdown.CreateCountdown(1986, 7, 24, 31025);
+	</script>
 </body>
 </html>
