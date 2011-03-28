@@ -3,37 +3,40 @@
 	<link href='http://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="style.css" />
-	<script src="github-projets.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script src="github-projects.js"></script>
 </head>
 <body>
 	<div id="header">
 		<span class="fancy">David Ackerman's</span> Github projects
 	</div>
 	<div id="viewer">
-		<div class="viewer_content">
-			<div class="title">
-				101 Goals in 1001 Days
-				<a href="https://github.com/dackerman/101-in-1001-Goals" title="See the source code on Github!">
-					<img src="images/github-link.png" />
-				</a>
-			</div>
-			<a href="images/101in1001_mobile.png">
-				<img class="thumb float-left" src="images/101in1001_mobile_thumb.png" />
-			</a>
-			<div class="description">
-				<p>I read an article from <a href="http://101goalsin1001days.com/">http://101goalsin1001days.com</a> about how to track your goals.  The idea is that you come up with 101 things that you want to accomplish in about two years.  You write those goals down, then come up with a list of tasks for each goal.  The first task in each goal should be something you can take action on <em>right now</em>, so that you could pick from any goal on any day and start making progress on it.</p>
-				<a href="images/101in1001_desktop.png">
-					<img class="thumb float-right" src="images/101in1001_desktop_thumb.png" />
-				</a>
-				<p>The main problem with this idea, is that you will presumably have a list of 101 things that you can do <em>now</em>.  It can be hard to keep track of what task goes to what goal and how to organize those goals into overarching themes. So, I did what any good hacker would do, make his own!</p>
-				<p>The application allows you to create a list of goals, and link each one to a "Category" that the goal falls into. When you look at your goals, you can then see each goal neatly indented under the category it is in. When you start filling out each task for the goal, you can set it as "current", which means it will go into your master task list. The task list then shows you all your current tasks, which you can complete by selecting "done".</p>
-				<p>I made this app in python/Django with a SQLite DB backing it. It just runs on my local machine. However, I like to see my Goals and tasks while on the go, so I made a special mobile-version that allows me to see goals and tasks from my Nexus S.</p>
-			</div>
+		<div id="viewer_content" class="viewer_content">
+			
 		</div>
 	</div>
 	<div id="content">
 		<div id="left_column" class="column">
-			<div class="top left project"></div>
+			<div class="top left project">
+				<div class="title">
+					101 Goals in 1001 Days
+					<a href="https://github.com/dackerman/101-in-1001-Goals" title="See the source code on Github!">
+						<img src="images/github-link.png" />
+					</a>
+				</div>
+				<a href="images/101in1001_mobile.png" title="Mobile version of the site">
+					<img class="thumb float-left" src="images/101in1001_mobile_thumb.png" />
+				</a>
+				<div class="description">
+					<p>I read an article from <a href="http://101goalsin1001days.com/">http://101goalsin1001days.com</a> about how to track your goals.  The idea is that you come up with 101 things that you want to accomplish in about two years.  You write those goals down, then come up with a list of tasks for each goal.  The first task in each goal should be something you can take action on <em>right now</em>, so that you could pick from any goal on any day and start making progress on it.</p>
+					<a href="images/101in1001_desktop.png" title="Desktop version of the site">
+						<img class="thumb float-right" src="images/101in1001_desktop_thumb.png" />
+					</a>
+					<p>The main problem with this idea, is that you will presumably have a list of 101 things that you can do <em>now</em>.  It can be hard to keep track of what task goes to what goal and how to organize those goals into overarching themes. So, I did what any good hacker would do, make his own!</p>
+					<p>The application allows you to create a list of goals, and link each one to a "Category" that the goal falls into. When you look at your goals, you can then see each goal neatly indented under the category it is in. When you start filling out each task for the goal, you can set it as "current", which means it will go into your master task list. The task list then shows you all your current tasks, which you can complete by selecting "done".</p>
+					<p>I made this app in python/Django with a SQLite DB backing it. It just runs on my local machine. However, I like to see my Goals and tasks while on the go, so I made a special mobile-version that allows me to see goals and tasks from my Nexus S.</p>
+				</div>
+			</div>
 			<div class="middle left project"></div>
 			<div class="bottom left project"></div>
 		</div>
