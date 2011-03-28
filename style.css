@@ -8,7 +8,6 @@ body {
 
 code {
 	font-weight:bold;
-	color:#000;
 }
 
 .thumb {
@@ -40,6 +39,21 @@ code {
 #header .fancy {
 }
 
+#footer {
+	width:880px;
+	float:left;
+	clear:both;
+
+	padding:10px;
+	margin-top:5px;
+
+	font-family:monospace;
+	font-size:0.8em;
+	background-color:white;
+	color:#666;
+	border-radius:10px;
+}
+
 #viewer {
 	width:885px;
 	min-height:400px;
@@ -63,7 +77,8 @@ code {
 	font-family:'Amaranth', sans-serif;
 	font-weight:bold;
 	text-align:right;
-	border-bottom:3px solid #333;
+	color:#111;
+	border-bottom:3px solid #111;
 }
 
 /*Only display large heading when in big window*/

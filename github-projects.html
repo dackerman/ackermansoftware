@@ -36,7 +36,25 @@
 					<p>I made this app in python/Django with a SQLite DB backing it. It just runs on my local machine. However, I like to see my Goals and tasks while on the go, so I made a special mobile-version that allows me to see goals and tasks from my Nexus S.</p>
 				</div>
 			</div>
-			<div class="middle left project"></div>
+			<div id="arkanoid_id" class="middle left project">
+				<div class="title">
+					Physics Arkanoid
+					<a href="https://github.com/dackerman/Physics-Arkanoid" title="See the source code on Github!">
+						<img src="images/github-link.png" />
+					</a>
+				</div>
+				<div class="description">
+				<a href="images/arkanoid_intact.png">
+					<img class="thumb float-left" src="images/arkanoid_intact_thumb.png" />
+				</a>
+				<p>This game is essentially a clone of the classic Arkanoid games from the arcade. You controll a little bumper with your phone's trackball, and try to hit the ball as it comes down the screen.  If the ball hits any of the bricks above, they break loose and come falling down, obeying the laws of 2D physics (including rotation, rebound, and collision with other bricks)! I used the great library <a href="http://www.jbox2d.org/">JBox2D</a> for my physics animations.</p>
+				<a href="images/arkanoid_broken.png">
+					<img class="thumb float-right" src="images/arkanoid_broken_thumb.png" />
+				</a>
+				<p>This is the first game (or any app for that matter) I built on Android.  I build it when I had an HTC Hero, and it clearly shows. The screenshot on the left is taken with a Nexus S, which has much better screen resolution (<code>480x800</code> as opposed to <code>240x320</code>). I didn't bother to use relative coordinates, so you can see the whole game only takes up a small portion of the screen! Oh well, it was a great learning experience.</p>
+				<p>One thing that can't be shown in a screenshot, is that I used the Android api to find the direction of gravity, and changed my in-game gravity to match it.  Therefore, when the user hit a block and it came falling down, you could move your phone to have it bounce out of the way of your ball.</p>
+				</div>
+			</div>
 			<div class="bottom left project"></div>
 		</div>
 		<div id="center_column" class="column">
@@ -83,6 +101,15 @@
 			</div>
 			<div class="middle right project"></div>
 			<div class="bottom right project"></div>
+		</div>
+		<div id="footer">
+			Copyright &copy; 2011 David Ackerman, All rights reserved.
+			<span class="float-right">
+				contact me:
+				<a href="http://twitter.com/dackerman">@dackerman</a>
+				<a href="http://github.com/dackerman">github</a>
+				<a href="http://david-ackerman.com/blog">blog</a>
+			<span>
 		</div>
 	</div>
 </body>
