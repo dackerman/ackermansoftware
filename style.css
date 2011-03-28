@@ -6,6 +6,11 @@ body {
 	font-size:1.2em;
 }
 
+code {
+	font-weight:bold;
+	color:#000;
+}
+
 .thumb {
 	margin:5px;
 	border-radius:10px;
@@ -54,12 +59,21 @@ body {
 	color:#333;
 }
 
-.viewer_content .title {
+.title {
 	font-family:'Amaranth', sans-serif;
 	font-weight:bold;
-	font-size:1.5em;
 	text-align:right;
 	border-bottom:3px solid #333;
+}
+
+/*Only display large heading when in big window*/
+.viewer_content .title {
+	font-size:1.5em;
+}
+
+/*Hide github image in small window*/
+.project .title img {
+	display:none;
 }
 
 .viewer_content .description {

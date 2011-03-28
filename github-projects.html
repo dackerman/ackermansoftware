@@ -49,7 +49,7 @@
 				</div>
 				<div class="description">
 					<img class="thumb float-right" src="images/dackdroid_code1.png" />
-					<p>This project is a 2D Game engine built specifically for android games. I have always been very interested in video game engines, but only recently have had any idea how to actually build one. I still don't, but I had some ideas about how I would go about it - especially after reading about the great talks from 
+					<p>This project is a 2D Game engine built specifically for android games. I have always been very interested in video game engines, but only recently have had any idea how to actually build one. I still don't, but I had some ideas about how I would go about it - especially after watching some great talks from 
 					<a href="http://www.youtube.com/watch?v=7-62tRHLcHk">Chris Pruett</a>
 					about Android game development.</p>
 					<p>This application features two threads, one that renders the scene, and one that executes the game logic. The rendering thread gets frequently blocked by IO, so it's advantageous to have the game thread allowed to do some processing while the rendering thread displays the last image. I use double buffering, which both allows me to keep the game screen from flickering, but also allows me to build up the next frame of animation on the game thread while the rendering thread displays the last one.</p>
@@ -62,7 +62,25 @@
 			<div class="bottom center project"></div>
 		</div>
 		<div id="right_column" class="column">
-			<div class="top right project"></div>
+			<div id="forthorrors_id" class="top right project">
+				<div class="title">
+					Fort Horrors!
+					<a href="https://github.com/dackerman/Fort-Horrors" title="See the source code on Github!">
+						<img src="images/github-link.png" />
+					</a>
+				</div>
+				<div class="description">
+					<a href="images/fort_horrors_demo.png" title="Demo screenshot with birds">
+						<img class="thumb float-left" src="images/fort_horrors_demo_thumb.png" />
+					</a>
+					<p>This is the game that I had in mind while building the <a href="#dackdroid">Dackdroid game engine</a>. The name "Fort Horrors!" comes from my idea for this to be a survival horror game.</p>
+					<p>The premise of the game is that you have Zombies coming at you from all sides, and you need to stay in your fort to keep from getting eaten. You need to build a fort around yourself, but the Zombies are busy breaking down your walls! You need to be constantly repairing your walls and setting up traps to kill the zombies. Every time you kill a zombie, you get some extra materials to keep alive.</p>
+					<img class="thumb float-right" src="images/fort_horrors_icon.png" title="The icon I created for Fort Horrors. The red behind the skull is supposed to be blooood" />
+					<p>To create the demo screenshot you see on the left, I used Dackdroid's tiling engine to make a landscape of grass, then added extra types of tiles for concrete (including special corner tiles that you can see blending into the grass at the edges). The little orange things are actually birds, and each one has it's own AI.</p>
+					<p> Each bird has a simple three frame animation and flys around the screen with some basic AI. Each bird has a <code>think()</code> stage, and it decides where it needs to fly, flys there, and then thinks about where to fly next. All the birds AI's are in the Game Thread, calculated in a simple for loop across all thinking entities in the game.</p>
+					<p>As you can see from the debug output, the rendering and logic threads are both running around 20fps, but this is only because I have throttled them that slow - the actual framerate I could get with this demo (about 50 birds) was over 60fps.</p>
+				</div>
+			</div>
 			<div class="middle right project"></div>
 			<div class="bottom right project"></div>
 		</div>

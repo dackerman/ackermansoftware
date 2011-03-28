@@ -11,6 +11,10 @@ dackerman.set_location = function(element){
     window.location.hash = $(element).attr('id').slice(0, -3);
 }
 
+dackerman.navigate_to_hash = function(){
+	$(dackerman.get_location()).click();
+};
+
 $(document).ready(function(){
 	$(".project").click(function(event){
 	    dackerman.set_location(this);
@@ -22,11 +26,15 @@ $(document).ready(function(){
 		  $(this).css('background-color'));
 		event.preventDefault();
 	});
+
+	$(window).bind("hashchange", function(){
+		dackerman.navigate_to_hash();
+	});
 	
 	//Go to hashed page, or default.
 	if(window.location.hash == ''){
 	    $("#101goals_id").click(); 
 	} else {
-	    $(dackerman.get_location()).click(); 
+	    dackerman.navigate_to_hash();
 	}
 });
