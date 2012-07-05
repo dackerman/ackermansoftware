@@ -15,17 +15,6 @@ dackerman.navigate_to_hash = function(){
 	$(dackerman.get_location()).click();
 };
 
-dackerman.init_countdown = function(){
-	$("#countdown_recalculate").click(function(event){
-		countdown.CreateCountdown(
-			$("#countdown_year").attr('value'),
-			$("#countdown_month").attr('value'),
-			$("#countdown_day").attr('value'),
-			$("#countdown_ends").attr('value'));
-
-	});
-};
-
 $(document).ready(function(){
 	$(".project").click(function(event){
 	    dackerman.set_location(this);

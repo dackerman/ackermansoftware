@@ -50,6 +50,9 @@
 					<p>This works similarly to password generation tools that take a basic password and run a one-way encryption through it with a salt of the website. The benefit of this latin square is that you can print it out and take it with you without worrying about someone stealing it. Since you make up your own method for deriving passwords, there is no indication to a theif what your passwords are. Also, since you can take it offline, you don't have to worry about a server getting hacked and releasing passwords, or some program getting deprecated and locking you out of your passwords.</p>
 					<h4>Implementation</h4>
 					<p>Since a latin square has the constraint that each row and column must contain all the letters of the alphabet exactly once, this means there are many "invalid" latin squares, and you need to dynamically adjust what characters you have to work with as you generate each row. It is also possible to generate some rows that make the following rows impossible - as the constraints for what characters you have left shrink as you get to the last row. It's possible that more than one column has the same letter left to complete the alphabet - in which case the row would be forced to have two characters with the same letter. In this case, my algorithm backs up and retries previous rows randomly to try and get one that is valid. It does this all very quickly, and as you can see from the screenshot, it takes about 20 milliseconds to generate a given latin square.</p>
+					<a href="https://www.grc.com/otg/offthegrid.htm" title="Screenshot of Steve Gibson's latin square" target="_blank">
+						<img class="thumb float-left" src="images/offthegrid_stevessquare.png" />
+					</a>
 					<p>One interesting aspect of the latin square is that the space of possible valid latin squares have more bits of entropy than normal random number generators, which means that you can't even reach every possible unique latin square by just randomly generating them. Therefore, my solution can't generate all possible latin squares, but the code is flexible enough to take a new random number generator if one was created. Steve Gibson created his own ultra-high entropy PRNG specifically for this project.</p>
 				</div>
 			</div>
@@ -103,42 +106,6 @@
 					<p>Java application that syncs files to your server.</p>
 				</div>
 			</div>
-			<!--
-			<div id="countdownjs_id" class="middle center project">
-				<div class="title">
-					Countdown.js Gist
-					<a href="https://gist.github.com/815928" title="See the gist on Github!" target="_blank">
-						<img src="images/github-link.png" />
-					</a>
-				</div>
-				<div class="description">
-					<div class="thumb float-left" style="background-color:white;width:250px;padding:5px;">
-						Running example!<br />
-						<div id="countdown"></div> until dackerman is 85 years old!
-						<table id="countdown_demo_table">
-							<tr>
-								<td><label for="countdown_year">Year</label></td>
-								<td><input id="countdown_year" type="text" value="1986" size="4"/></td>
-							</tr>
-							<tr>
-								<td><label for="countdown_month">Month</label></td>
-								<td><input id="countdown_month" type="text" value="7" size="2"/></td>
-							</tr>
-							<tr>
-								<td><label for="countdown_day">Day</label></td>
-								<td><input id="countdown_day" type="text" value="24" size="2"/></td>
-							</tr>
-							<tr>
-								<td><label for="countdown_ends">Ends In</label></td>
-								<td><input id="countdown_ends" type="text" value="31025" size="2"/> Days</td>
-							</tr>
-						</table>
-						<input id="countdown_recalculate" type="button" value="Recalculate" />
-					</div>
-					<p><code>Countdown.js</code> is a simple script I created to countdown a number of days until a goal is met.  The inputs to the function are the date the countdown started, and the number of days until the countdown ends.</p>
-					<p>This is not exactly the format of most countdown scripts, but it is perfect for the 101 goals in 1001 days project. This way, someone can enter in the day they started their goals, and it will tell them how many months, weeks, and days are left until it's over.</p>
-				</div>
-			</div> -->
 			<div id="101goals_id" class="bottom center project">
 				<div class="title">
 					101 Goals in 1001 Days
@@ -185,7 +152,12 @@
 					Git Showcase
 				</div>
 				<div class="description">
-					<p>Github showcase.</p>
+					<a href="images/gitshowcase.png" title="Screenshot of gitshowcase.com/dackerman" target="_blank">
+						<img class="thumb float-right" src="images/gitshowcase_thumb.png" />
+					</a>
+					<p>Git showcase, located at <a href="http://gitshowcase.com">gitshowcase.com</a>, is a website that is meant to show a developer's major projects front and center, and help them to expose all the cool work they are doing.</p>
+					<p>GitHub itself works pretty well for just showing the list of projects that someone is working on, but it doesn't necessarily order them with the biggest one a the top, and doesn't really show good statistics about the project in relation to the developer working on it.</p>
+					<p>Git showcase is still a work in progress, but what it has so far is a mechanism for determining how "important" each of a developer's public projects are, based on commit history (by the developer, and not others), how recent the project is, and how popular it is (followers, forks). The site also has icons to show the primary programming language for each project, and aggregates them at the top so anyone can see how many programming languages they really know (based on what kind of code they like to commit).</p>
 				</div>
 			</div>
 			<div id="dotemacs_id" class="bottom right project">
@@ -203,19 +175,17 @@
 			</div>
 		</div>
 		<div id="footer">
-			Copyright &copy; 2011 David Ackerman, All rights reserved.
+			Copyright &copy; 2012 David Ackerman, All rights reserved.
 			<span class="float-right">
 				contact me:
-				<a href="http://twitter.com/dackerman" target="_blank">@dackerman</a>
 				<a href="http://github.com/dackerman" target="_blank">github</a>
+				<a href="http://david-ackerman.com" target="_blank">homepage</a>
+				<a href="http://david-ackerman.com/resume" target="_blank">resume</a>
 				<a href="http://david-ackerman.com/blog" target="_blank">blog</a>
 			<span>
 		</div>
 	</div>
 	<script>
-		// Script for the countdown.js window.
-		countdown.barWidth = 240;
-		countdown.CreateCountdown(1986, 7, 24, 31025);
 	</script>
 </body>
 </html>
