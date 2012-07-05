@@ -13,6 +13,11 @@
 	text-align:center;
 }
 
+h4 {
+	line-height: 1;
+	margin: 0;
+}
+
 body {
 	margin:0px;
 	padding:0px;
@@ -171,7 +176,7 @@ label {
 }
 
 .middle.left {
-	background-color:#c48a38;
+	background-color:#e6ac5a;
 }
 
 .middle.center {
@@ -203,9 +208,7 @@ label {
 	
 }
 
-/*When I get more projects, enable bottom row.*/
 .bottom {
-	display:none;
 }
 
 .left {

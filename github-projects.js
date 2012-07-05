@@ -44,7 +44,7 @@ $(document).ready(function(){
 	
 	//Go to hashed page, or default.
 	if(window.location.hash == ''){
-	    $("#101goals_id").click(); 
+	    $("#dackdroid_id").click(); 
 	} else {
 	    dackerman.navigate_to_hash();
 	}

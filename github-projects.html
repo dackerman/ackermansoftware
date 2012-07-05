@@ -22,27 +22,38 @@
 	</div>
 	<div id="content">
 		<div id="left_column" class="column">
-			<div id="101goals_id" class="top left project">
+			<div id="openglgame_id" class="top left project">
 				<div class="title">
-					101 Goals in 1001 Days
-					<a href="https://github.com/dackerman/101-in-1001-Goals" title="See the source code on Github!" target="_blank">
+					Open GL Game Demo
+					<a href="https://github.com/dackerman/opengl-game" title="See the source on Github!" target="_blank">
 						<img src="images/github-link.png" />
 					</a>
 				</div>
 				<div class="description">
-					<a href="images/101in1001_mobile.png" title="Mobile version of the site" target="_blank">
-						<img class="thumb float-left" src="images/101in1001_mobile_thumb.png" />
-					</a>
-					<p>It all started when I read an article from <a href="http://www.blog.swetavajjhala.com/?p=387">Sweta Vajjhala's blog</a> about how to track your goals. The idea is that you come up with 101 things that you want to accomplish in about two years.  You write those goals down, then come up with a list of tasks for each goal.  The first task in each goal should be something you can take action on <em>right now</em>, so that you could pick from any goal on any day and start making progress on it.</p>
-					<a href="images/101in1001_desktop.png" title="Desktop version of the site" target="_blank">
-						<img class="thumb float-right" src="images/101in1001_desktop_thumb.png" />
-					</a>
-					<p>The main problem with this idea, is that you will presumably have a list of 101 things that you can do <em>now</em>.  It can be hard to keep track of what task goes to what goal and how to organize those goals into overarching themes. So, I did what any good hacker would do, make his own!</p>
-					<p>The application allows you to create a list of goals, and link each one to a "Category" that the goal falls into. When you look at your goals, you can then see each goal neatly indented under the category it is in. When you start filling out each task for the goal, you can set it as "current", which means it will go into your master task list. The task list then shows you all your current tasks, which you can complete by selecting "done".</p>
-					<p>I made this app in python/Django with a SQLite DB backing it. It just runs on my local machine. However, I like to see my Goals and tasks while on the go, so I made a special mobile-version that allows me to see goals and tasks from my Nexus S.</p>
+					<p>TBD</p>
 				</div>
 			</div>
-			<div id="arkanoid_id" class="middle left project">
+			<div id="offthegrid_id" class="middle left project">
+				<div class="title">
+					Off the Grid
+					<a href="https://github.com/dackerman/Off-the-Grid" title="See the source on Github!" target="_blank">
+						<img src="images/github-link.png" />
+					</a>
+				</div>
+				<div class="description">
+					<a href="images/offthegrid_screen.png" target="_blank">
+						<img class="thumb float-right" src="images/offthegrid_output.png" />
+					</a>
+					<p>Based on Steve Gibson's <a href="https://www.grc.com/otg/offthegrid.htm">Off the Grid project</a> for storing passwords, this project implements an alphabetic "latin square" in Java.</p>
+					<h4>What is "Off the Grid"</h4>
+					<p>Steve Gibson is a security specialist, and has come up with a way for people to generate a random <a href="http://en.wikipedia.org/wiki/Latin_square">"latin square"</a> to use as a key for all their online and offline passwords. This avoids the problem of users always using the same password for all their websites, because you can use one printout of a latin square to "derive" as many unique passwords as you'd like with a simple strategy based on the domain name.
+					<p>This works similarly to password generation tools that take a basic password and run a one-way encryption through it with a salt of the website. The benefit of this latin square is that you can print it out and take it with you without worrying about someone stealing it. Since you make up your own method for deriving passwords, there is no indication to a theif what your passwords are. Also, since you can take it offline, you don't have to worry about a server getting hacked and releasing passwords, or some program getting deprecated and locking you out of your passwords.</p>
+					<h4>Implementation</h4>
+					<p>Since a latin square has the constraint that each row and column must contain all the letters of the alphabet exactly once, this means there are many "invalid" latin squares, and you need to dynamically adjust what characters you have to work with as you generate each row. It is also possible to generate some rows that make the following rows impossible - as the constraints for what characters you have left shrink as you get to the last row. It's possible that more than one column has the same letter left to complete the alphabet - in which case the row would be forced to have two characters with the same letter. In this case, my algorithm backs up and retries previous rows randomly to try and get one that is valid. It does this all very quickly, and as you can see from the screenshot, it takes about 20 milliseconds to generate a given latin square.</p>
+					<p>One interesting aspect of the latin square is that the space of possible valid latin squares have more bits of entropy than normal random number generators, which means that you can't even reach every possible unique latin square by just randomly generating them. Therefore, my solution can't generate all possible latin squares, but the code is flexible enough to take a new random number generator if one was created. Steve Gibson created his own ultra-high entropy PRNG specifically for this project.</p>
+				</div>
+			</div>
+			<div id="arkanoid_id" class="bottom left project">
 				<div class="title">
 					Physics Arkanoid
 					<a href="https://github.com/dackerman/Physics-Arkanoid" title="See the source code on Github!" target="_blank">
@@ -61,7 +72,6 @@
 				<p>One thing that can't be shown in a screenshot, is that I used the Android api to find the direction of gravity, and changed my in-game gravity to match it.  Therefore, when the user hit a block and it came falling down, you could move your phone to have it bounce out of the way of your ball.</p>
 				</div>
 			</div>
-			<div class="bottom left project"></div>
 		</div>
 		<div id="center_column" class="column">
 			<div id="dackdroid_id" class="top center project">
@@ -82,6 +92,18 @@
 					<p>There is also a rudimentary camera system that currently can be controlled by the GameThread. If desired, the user of this library could control the camera X and Y position with the touchscreen, allowing the user to drag the camera around to view the world.</p>
 				</div>
 			</div>
+			<div id="spookyaction_id" class="middle center project">
+				<div class="title">
+					Spooky Action at a Distance
+					<a href="https://github.com/dackerman/spooky-action" title="See the source code on Github!" target="_blank">
+						<img src="images/github-link.png" />
+					</a>
+				</div>
+				<div class="description">
+					<p>Java application that syncs files to your server.</p>
+				</div>
+			</div>
+			<!--
 			<div id="countdownjs_id" class="middle center project">
 				<div class="title">
 					Countdown.js Gist
@@ -116,8 +138,27 @@
 					<p><code>Countdown.js</code> is a simple script I created to countdown a number of days until a goal is met.  The inputs to the function are the date the countdown started, and the number of days until the countdown ends.</p>
 					<p>This is not exactly the format of most countdown scripts, but it is perfect for the 101 goals in 1001 days project. This way, someone can enter in the day they started their goals, and it will tell them how many months, weeks, and days are left until it's over.</p>
 				</div>
+			</div> -->
+			<div id="101goals_id" class="bottom center project">
+				<div class="title">
+					101 Goals in 1001 Days
+					<a href="https://github.com/dackerman/101-in-1001-Goals" title="See the source code on Github!" target="_blank">
+						<img src="images/github-link.png" />
+					</a>
+				</div>
+				<div class="description">
+					<a href="images/101in1001_mobile.png" title="Mobile version of the site" target="_blank">
+						<img class="thumb float-left" src="images/101in1001_mobile_thumb.png" />
+					</a>
+					<p>It all started when I read an article from <a href="http://www.blog.swetavajjhala.com/?p=387">Sweta Vajjhala's blog</a> about how to track your goals. The idea is that you come up with 101 things that you want to accomplish in about two years.  You write those goals down, then come up with a list of tasks for each goal.  The first task in each goal should be something you can take action on <em>right now</em>, so that you could pick from any goal on any day and start making progress on it.</p>
+					<a href="images/101in1001_desktop.png" title="Desktop version of the site" target="_blank">
+						<img class="thumb float-right" src="images/101in1001_desktop_thumb.png" />
+					</a>
+					<p>The main problem with this idea, is that you will presumably have a list of 101 things that you can do <em>now</em>.  It can be hard to keep track of what task goes to what goal and how to organize those goals into overarching themes. So, I did what any good hacker would do, make his own!</p>
+					<p>The application allows you to create a list of goals, and link each one to a "Category" that the goal falls into. When you look at your goals, you can then see each goal neatly indented under the category it is in. When you start filling out each task for the goal, you can set it as "current", which means it will go into your master task list. The task list then shows you all your current tasks, which you can complete by selecting "done".</p>
+					<p>I made this app in python/Django with a SQLite DB backing it. It just runs on my local machine. However, I like to see my Goals and tasks while on the go, so I made a special mobile-version that allows me to see goals and tasks from my Nexus S.</p>
+				</div>
 			</div>
-			<div class="bottom center project"></div>
 		</div>
 		<div id="right_column" class="column">
 			<div id="forthorrors_id" class="top right project">
@@ -139,7 +180,15 @@
 					<p>As you can see from the debug output, the rendering and logic threads are both running around 20fps, but this is only because I have throttled them that slow - the actual framerate I could get with this demo (about 50 birds) was over 60fps.</p>
 				</div>
 			</div>
-			<div id="dotemacs_id" class="middle right project">
+			<div id="gitshowcase_id" class="middle right project">
+				<div class="title">
+					Git Showcase
+				</div>
+				<div class="description">
+					<p>Github showcase.</p>
+				</div>
+			</div>
+			<div id="dotemacs_id" class="bottom right project">
 				<div class="title">
 					.emacs file
 					<a href="https://github.com/dackerman/Emacs-file" title="See the source code on Github!" target="_blank">
@@ -152,7 +201,6 @@
 					<p>Also note that I have written at least a little emacs lisp code since I picked up the program. Although I am pretty familiar with functional programming languages in general, I am not very familiar with lisp in particular, so coming up with my own <code>backward-kill-word</code> was definitely a challenge. Also note that I took most of the <code>backward-kill-word</code> code from a post on stackoverflow, so I cannot claim all the credit for this function.</p>
 				</div>
 			</div>
-			<div class="bottom right project"></div>
 		</div>
 		<div id="footer">
 			Copyright &copy; 2011 David Ackerman, All rights reserved.
