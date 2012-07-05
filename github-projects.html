@@ -24,13 +24,17 @@
 		<div id="left_column" class="column">
 			<div id="openglgame_id" class="top left project">
 				<div class="title">
-					Open GL Game Demo
+					Open GL Demo
 					<a href="https://github.com/dackerman/opengl-game" title="See the source on Github!" target="_blank">
 						<img src="images/github-link.png" />
 					</a>
 				</div>
 				<div class="description">
-					<p>TBD</p>
+					<img class="thumb float-right" src="images/opengl_thumb.png" />
+					<p>This project was an initial attempt at learning the new OpenGL libraries and getting started making a basic game engine in 3D. Obviously a full functioning 3D engine takes quite a while to build, but I got a basic understanding from building this concept while reading <a href="http://www.amazon.com/Game-Engine-Architecture-Jason-Gregory/dp/1568814135">"Game Engine Architecture"</a> by Jason Gregory.</p>
+					<p>In C and C++, I implemented an asset loading system for shaders and models from the ground up, using my own model loading format. I built a file exporter in Python that I could run in Blender to export into the proper format.  The image of the duck on the right is one of the models I created in blender and exported into my engine for rendering.</p>
+					<p>I learned a lot about how game engines work from the book, but only applied the basics to this engine as I ended up spending more time worrying about low level details (like making sure I'm reading files properly, making sure the basic lighting shader math was correct). The project uses the latest OpenGL standard, which means there aren't any built in functions for rendering - you have to figure out all the shaders yourself.</p>
+					<p>Soon, I hope to build a 3D application using Go, since it has the ability to interact with C and handle low level concerns, but is a nice modern language with many improvements over C and C++.</p>
 				</div>
 			</div>
 			<div id="offthegrid_id" class="middle left project">
@@ -103,6 +107,9 @@
 					</a>
 				</div>
 				<div class="description">
+					<a href="images/spookyaction_fullpage.png" title="Screenshot of editing the source code from the app" target="_blank">
+						<img class="thumb float-right" src="images/spookyaction_thumb.png" />
+					</a>
 					<p>"Spooky action at a distance" is a GWT webapp that allows a user to edit files on a remote machine (namely, the webserver). The main advantage to this app is that you can have an extremely slow and flaky connection and still not notice.</p>
 					<p>The way this application works is that a person first chooses a file to edit. They pick the file and it loads in the frontend. This is the most networking activity needed, since the whole file needs to be loaded up front. After this happens, then the user starts editing the file in the editor area. The application is keeping track of all the actions that "commands" that the user is performing on the file, such as movement and keys pressed (like backspace, and text inserted). The application keeps track of these actions and "applies" them to the code in javascript so you can see your changes. PICK UP HERE</p>
 				</div>
