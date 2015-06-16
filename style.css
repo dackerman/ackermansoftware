@@ -1,222 +1,83 @@
-/* Color Scheme: http://colorschemedesigner.com/#0h41TtI--tIMP */
-
-#ie_warning {
-	width:100%;
-	margin:0px;
-	padding:5px;
-	border-bottom:1px solid black;
-	background-color:#f00;
-	color:#fff;
-	font-family:'Cabin';
-	font-size:0.7em;
-	font-weight:bold;
-	text-align:center;
-}
-
-h4 {
-	line-height: 1;
-	margin: 0;
-}
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400);
 
 body {
-	margin:0px;
-	padding:0px;
-	background-color:#aaa;
-	color:#333;
-	font-family:'Cabin', sans-serif;
-	font-size:1.2em;
+  font-family: 'Lato', sans-serif;
+  color: #555;
+  background-color: #eee;
+  font-size: 12pt;
+  line-height: 20pt;
+  padding: 0;
+  margin: 0;
 }
 
-code {
-	font-weight:bold;
-}
-
-.thumb {
-	margin:5px;
-	border-radius:10px;
-	box-shadow:2px 2px 2px #333;
-}
-
-#countdown {
-	display:inline;
-}
-
-label {
-	float:right;
-}
-
-.float-left {
-	float:left;
-}
-
-.float-right {
-	float:right;
-}
-
-#header {
-	color:#333;
-	width:900px;
-	margin:auto;
-	padding-right:10px;
-
-	font-size:1.5em;
-	font-family:'Amaranth', sans-serif;
-	border-bottom:#aaa;
-	text-align:right;
-}
-
-#header .fancy {
-}
-
-#footer {
-	width:880px;
-	float:left;
-	clear:both;
-
-	padding:10px;
-	margin-top:5px;
-
-	font-family:monospace;
-	font-size:0.8em;
-	background-color:white;
-	color:#666;
-	border-radius:10px;
-}
-
-#viewer {
-	width:885px;
-	min-height:400px;
-	margin:auto;
-	margin-bottom:10px;
-	background-image:url('images/gradient.png');
-	background-repeat:repeat-x;
-	background-position:left top;
-
-	border-radius:10px;
-
-	border:5px solid #333;
-	box-shadow:5px 5px 0px #000;
-
-	cursor:arrow;
-}
-
-.viewer_content {
-	margin:10px;
-	color:#333;
-}
-
-.title {
-	font-family:'Amaranth', sans-serif;
-	font-weight:bold;
-	text-align:right;
-	color:#111;
-	border-bottom:3px solid #111;
-}
-
-/*Only display large heading when in big window*/
-.viewer_content .title {
-	font-size:1.5em;
-}
-
-/*Hide github image in small window*/
-.project .title img {
-	display:none;
-}
-
-.viewer_content .description {
-	font-size:0.9em;
-	/*Keep floating divs inside block*/
-	overflow:hidden;
+a {
+  color: #333;
 }
 
 #content {
-	width:900px;
-	margin:auto;
-	padding:0px;
-	padding-left:5px;
+  box-sizing: border-box;
+  max-width: 1000px;
+  margin: auto;
+  background-color: white;
+  padding: 20px;
 }
 
-.column {
-	width:300px;
-	height:100%;
-	float:left;
+section:after {
+  visibility: hidden;
+  display: block;
+  content: "";
+  height: 0;
+  clear: both;
 }
 
-.project {
-	height:200px;
-	padding:5px;
-	margin:5px;
-	margin-left:0px;
-	background-color:#fff;
-	overflow:hidden;
-
-	border:5px solid #333;
-	box-shadow:5px 5px 0px #000;
-
-
-	background-image:url('images/gradient.png');
-	background-repeat:repeat-x;
-	background-position:left top;
-
-	cursor:pointer;
+section {
+  padding: 30px 0;
+  clear: both;
+  border-bottom: 1px solid #aaa;
 }
 
-.top.left {
-	border-top-left-radius:	10px;
-	background-color:#ff9d12;
+section:last-child {
+  border: none;
 }
 
-.top.center {
-	background-color:#2397ff;
+section > .title {
+  padding: 10px 0;
+  position: relative;
+  font-size: 200%;
+  font-weight: bold;
 }
 
-.top.right {
-	border-top-right-radius: 10px;
-	background-color:#12ffa6;
+.github-link {
+  position: absolute;
+  right: 0;
+  height: 50px;
 }
 
-.middle.left {
-	background-color:#e6ac5a;
+
+.float-left {
+  float: left;
 }
 
-.middle.center {
-	background-color:#4286c4;
+.float-right {
+  float: right;
 }
 
-.middle.right {
-	background-color:#38c48f;
+.thumb {
+  margin:5px;
+  border-radius:10px;
+  box-shadow:2px 2px 2px #333;
 }
 
-.bottom.left {
-	border-bottom-left-radius: 10px;
-	background-color:#ffc36e;
+#footer {
+  box-sizing: border-box;
+  background-color: #333;
+  color:#ddd;
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 20px;
+  padding: 10px;
 }
 
-.bottom.center {
-	background-color:#79bfff;
-}
-
-.bottom.right {
-	border-bottom-right-radius: 10px;
-	background-color:#6effc8;
-}
-
-.top {
-}
-
-.center {
-	
-}
-
-.bottom {
-}
-
-.left {
-}
-
-.middle {
-	
-}
-
-.right {
+#footer a {
+  color: #ddd;
 }
