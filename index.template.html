@@ -1,0 +1,44 @@
+<!doctype html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+  <div id="content">
+    <h1><a href="https://github.com/dackerman">dackerman's Github project summaries</a></h1>
+    <p>I've described the motivations behind some of my github projects below, but I don't have everything here. Sometimes the project will have a README file to read.  If not, feel free to send me a message and ask about it!</p>
+    {{#each projects}}
+    <section id="{{github}}">
+      <div class="title">
+        <a href="https://github.com/dackerman/{{github}}" title="See the source on Github!" target="_blank">
+          {{ name }}
+          <img class="github-link" src="images/github-link.png" />
+        </a>
+      </div>
+      <div class="description">
+        {{#if thumbLink}}
+        <a href="images/{{thumbLink}}" target="_blank">
+          <img class="thumb float-right" src="images/{{thumb}}" />
+        </a>
+        {{/if}}        
+        {{^thumbLink}}
+        <img class="thumb float-right" src="images/{{thumb}}" />
+        {{/thumbLink}}
+        {{{description}}}
+      </div>
+    </section>
+    {{/each}}
+  </div>
+  <div id="footer">
+    Copyright &copy; <span id="copyrightYear">2015</span> David Ackerman, All rights reserved.
+    <script>
+      document.getElementById('copyrightYear').innerText = new Date().getYear() + 1900;
+    </script>
+    <span class="float-right">
+      contact me:
+      <a href="http://github.com/dackerman" target="_blank">github</a>
+      <a href="http://david-ackerman.com" target="_blank">homepage</a>
+      <a href="http://david-ackerman.com/blog" target="_blank">blog</a>
+      <span>
+  </div>
+</body>
+</html>
